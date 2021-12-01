@@ -35,7 +35,7 @@
 *.color15: #ffffff
 
 
-URxvt*font:xft:LiberationMono:style=Regular:size=24
+URxvt*font:xft:LiberationMono:style=Regular:size=16
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0
