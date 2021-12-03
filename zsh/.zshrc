@@ -11,8 +11,17 @@ source ~/pi-dotfiles/zsh/external/completion.zsh
 # add the external scripts directory
 fpath=($ZDOTDIR/external $fpath)
 
-# autoload prompt_purification_setup from external
-autoload -Uz prompt_purification_setup; prompt_purification_setup
+# prompt customization
+# autoload vcs_info in right prompt (git etc)
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+RPROMPT='%F{99}${vcs_info_msg_0_}%f'
+# PROMPT='${vcs_info_msg_0_}'
+zstyle ':vcs_info:git:*' formats '%b'
+# show current directory and  ▶ in a 256 color
+PROMPT='%F{116}%~%f %F{106}▶%f '
 
 # source scripts.sh
 source $DOTFILES/zsh/scripts.sh

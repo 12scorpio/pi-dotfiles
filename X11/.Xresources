@@ -35,7 +35,8 @@
 *.color15: #ffffff
 
 
-URxvt*font:xft:LiberationMono:style=Regular:size=16
+URxvt*font:xft:FiraCode:style=Medium:size=12
+URxvt*letterSpace: -1
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0
