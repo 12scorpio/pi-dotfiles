@@ -29,3 +29,6 @@ export DOTFILES="$HOME/pi-dotfiles"
 # add ripgrep support to fzf
 export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# set nvim source location
+export MYVIMRC="$XDG_CONFIG_HOME/nvim/init.vim"

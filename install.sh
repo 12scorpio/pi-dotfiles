@@ -5,7 +5,11 @@
 ########
 mkdir -p "$XDG_CONFIG_HOME/nvim"
 mkdir -p "$XDG_CONFIG_HOME/nvim/undo"
+rm -rf "$XDG_CONFIG_HOME/nvim/autoload/plugged"
+mkdir -p "$XDG_CONFIG_HOME/nvim/autoload"
+mkdir -p "$XDG_CONFIG_HOME/nvim/autoload/plugged"
 ln -sf "$HOME/pi-dotfiles/nvim/init.vim" "$XDG_CONFIG_HOME/nvim"
+ln -sf "$HOME/pi-dotfiles/nvim/autoload/plug.vim" "$XDG_CONFIG_HOME/nvim/autoload"
 
 #######
 # x11 #

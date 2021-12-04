@@ -11,16 +11,20 @@ source ~/pi-dotfiles/zsh/external/completion.zsh
 # add the external scripts directory
 fpath=($ZDOTDIR/external $fpath)
 
+# colorize output
+autoload -Uz colors; colors
+
 # prompt customization
-# autoload vcs_info in right prompt (git etc)
+# autoload vcs_info 
 autoload -Uz vcs_info
-precmd_vcs_info() { vcs_info }
-precmd_functions+=( precmd_vcs_info )
-setopt prompt_subst
-RPROMPT='%F{99}${vcs_info_msg_0_}%f'
-# PROMPT='${vcs_info_msg_0_}'
-zstyle ':vcs_info:git:*' formats '%b'
-# show current directory and  ▶ in a 256 color
+# set vcs_info in precmd and define right prompt
+precmd() {
+    vcs_info
+    RPROMPT="%F{138}${vcs_info_msg_0_}%b%f"
+}
+
+
+# left prompt show current directory and  ▶ in a 256 color
 PROMPT='%F{116}%~%f %F{106}▶%f '
 
 # source scripts.sh

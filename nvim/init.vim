@@ -1,3 +1,12 @@
+" use vim-plug as plugin manager
+call plug#begin('$XDG_CONFIG_HOME/nvim/autoload/plugged')
+    Plug 'itchyny/lightline.vim'
+    Plug 'junegunn/seoul256'
+    Plug 'preservim/nerdtree'
+call plug#end()
+
+
+" enable pasting
 set clipboard+=unnamedplus
 
 " no swap file
