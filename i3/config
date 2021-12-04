@@ -279,12 +279,12 @@ bar {
     #tray_output primary
     
     colors {
-        background  #875f87
-        statusline  #c0c0c0
-        separator   #d68787
+        background  #af8787
+        statusline  #ffffff
+        separator   #c0c0c0
 
         #                       border  background  text
-        focused_workspace       $background $background #875f87 
+        focused_workspace       $background $background #af8787 
         active_workspace        $black1 $black1 $foreground
         inactive_workspace      $black1 $black1 $foreground
         urgent_workspace        $red1   $red1   $foreground

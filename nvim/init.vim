@@ -1,9 +1,13 @@
 " use vim-plug as plugin manager
 call plug#begin('$XDG_CONFIG_HOME/nvim/autoload/plugged')
-    Plug 'itchyny/lightline.vim'
-    Plug 'junegunn/seoul256'
-    Plug 'preservim/nerdtree'
+  Plug 'junegunn/seoul256.vim'
+  Plug 'bling/vim-bufferline'
+  Plug 'preservim/nerdtree'
+  Plug 'airblabe/vim-gitgutter'
 call plug#end()
+
+" enable theme
+colo seoul256
 
 
 " enable pasting
