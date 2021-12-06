@@ -3,7 +3,6 @@ call plug#begin('$XDG_CONFIG_HOME/nvim/autoload/plugged')
   Plug 'junegunn/seoul256.vim'
   Plug 'bling/vim-bufferline'
   Plug 'preservim/nerdtree'
-  Plug 'airblabe/vim-gitgutter'
 call plug#end()
 
 " enable theme
